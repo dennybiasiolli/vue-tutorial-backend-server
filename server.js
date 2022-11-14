@@ -14,6 +14,7 @@ fastify.addHook('onRequest', async (request, reply) => {
 })
 
 fastify.register(require('./routes/products'))
+fastify.register(require('./routes/todos'))
 fastify.get('/', async (request, reply) => {
   return { hello: 'world' }
 })
