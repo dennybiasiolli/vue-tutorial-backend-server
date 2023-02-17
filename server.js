@@ -7,7 +7,7 @@ const fastify = require('fastify')({
 fastify.addHook('onRequest', async (request, reply) => {
   reply.header('Access-Control-Allow-Origin', '*')
   if (request.method === 'OPTIONS') {
-    reply.header('Access-Control-Allow-Headers', 'Content-Type,Content-Length,Server,Date,access-control-allow-methods,access-control-allow-origin')
+    reply.header('Access-Control-Allow-Headers', 'Content-Type,Content-Length,Server,Date,access-control-allow-methods,access-control-allow-origin,Authorization')
     reply.header('Access-Control-Allow-Methods', 'PUT,POST,GET,DELETE,OPTIONS,PATCH')
     reply.send()
   }
